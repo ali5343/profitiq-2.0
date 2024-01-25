@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+
+<html lang="en" class="light-style layout-navbar-fixed layout-menu-fixed" dir="ltr" data-theme="theme-default"
+  data-assets-path="../../assets/" data-template="vertical-menu-template">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+
+  <title>Referrals - Analytics</title>
+
+  <meta name="description" content="" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="../../assets/img/favicon/favicon.ico" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="../../assets/vendor/fonts/materialdesignicons.css" />
+  <link rel="stylesheet" href="../../assets/vendor/fonts/fontawesome.css" />
+  <!-- Menu waves for no-customizer fix -->
+  <link rel="stylesheet" href="../../assets/vendor/libs/node-waves/node-waves.css" />
+
+  <!-- Core CSS -->
+  <link rel="stylesheet" href="../../assets/vendor/css/rtl/core.css" class="template-customizer-core-css" />
+  <link rel="stylesheet" href="../../assets/vendor/css/rtl/theme-default.css" class="template-customizer-theme-css" />
+  <link rel="stylesheet" href="../../assets/css/demo.css" />
+
+  <!-- Vendors CSS -->
+  <link rel="stylesheet" href="../../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
+  <link rel="stylesheet" href="../../assets/vendor/libs/typeahead-js/typeahead.css" />
+  <link rel="stylesheet" href="../../assets/vendor/libs/apex-charts/apex-charts.css" />
+  <link rel="stylesheet" href="../../assets/vendor/libs/swiper/swiper.css" />
+
+  <!-- Page CSS -->
+  <link rel="stylesheet" href="../../assets/vendor/css/pages/cards-statistics.css" />
+  <link rel="stylesheet" href="../../assets/vendor/css/pages/cards-analytics.css" />
+  <!-- Helpers -->
+  <script src="../../assets/vendor/js/helpers.js"></script>
+
+  <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
+  <!--? Template customizer: To hide customizer set displayCustomizer value false in config.js.  -->
+  <script src="../../assets/vendor/js/template-customizer.js"></script>
+  <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
+  <script src="../../assets/js/config.js"></script>
+</head>
+
+<body>
+  <!-- Layout wrapper -->
+  <div class="layout-wrapper layout-content-navbar">
+    <div class="layout-container">
+      <!-- Menu -->
+
+      <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
+        <div class="app-brand demo">
+          <a href="index.html" class="app-brand-link">
+            <span class="app-brand-logo demo">
+              <span style="color: var(--bs-primary)">
+                <svg width="268" height="150" viewBox="0 0 50 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M53.5698 22.6703H39.3031L41.7429 20.5034L42.9828 17.4057L42.905 2.16391C42.8917 1.32811 43.1136 1.05017 43.7637 1.04483H52.0954C52.0954 1.04483 52.6787 1.04484 52.6739 1.61737C52.6691 2.1899 52.0954 2.16391 52.0954 2.16391H43.8879V6.92377H52.9242C52.9242 6.92377 53.4957 6.93893 53.4957 7.49411C53.4957 8.0493 52.9242 8.06446 52.9242 8.06446H43.8879V21.5631H53.5698C53.5698 21.5631 54.0606 21.5974 54.0684 22.1167C54.0761 22.636 53.5698 22.6703 53.5698 22.6703Z"
+                    fill="#B95A3F" />
+                  <path
+                    d="M32.5799 1.30864H23.1392V17.1861C23.2433 21.2155 24.585 23.3121 32.5799 23.5187C38.9107 23.6823 41.9714 22.7384 43.3991 17.9168C43.933 16.114 43.987 14.2095 43.987 12.3294V1.47524H42.905V15.2191C42.0209 21.6326 39.2707 22.6587 32.5799 22.4523V1.30864Z"
+                    fill="#401D24" />
+                  <path d="M17.0563 1.8623H5.93155L19.5046 25.0448L22.8935 18.6531V12.326L17.0563 1.8623Z"
+                    fill="#31357F" />
+                </svg>
+              </span>
+            </span>
+            <span class="app-brand-text demo menu-text fw-bold ms-2">User Panel</span>
+          </a>
+
+          <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M11.4854 4.88844C11.0081 4.41121 10.2344 4.41121 9.75715 4.88844L4.51028 10.1353C4.03297 10.6126 4.03297 11.3865 4.51028 11.8638L9.75715 17.1107C10.2344 17.5879 11.0081 17.5879 11.4854 17.1107C11.9626 16.6334 11.9626 15.8597 11.4854 15.3824L7.96672 11.8638C7.48942 11.3865 7.48942 10.6126 7.96672 10.1353L11.4854 6.61667C11.9626 6.13943 11.9626 5.36568 11.4854 4.88844Z"
+                fill="currentColor" fill-opacity="0.6" />
+              <path
+                d="M15.8683 4.88844L10.6214 10.1353C10.1441 10.6126 10.1441 11.3865 10.6214 11.8638L15.8683 17.1107C16.3455 17.5879 17.1192 17.5879 17.5965 17.1107C18.0737 16.6334 18.0737 15.8597 17.5965 15.3824L14.0778 11.8638C13.6005 11.3865 13.6005 10.6126 14.0778 10.1353L17.5965 6.61667C18.0737 6.13943 18.0737 5.36568 17.5965 4.88844C17.1192 4.41121 16.3455 4.41121 15.8683 4.88844Z"
+                fill="currentColor" fill-opacity="0.38" />
+            </svg>
+          </a>
+        </div>
+
+        <div class="menu-inner-shadow"></div>
+
+        <ul class="menu-inner py-1">
+          <!-- Dashboards -->
+          <li class="menu-item">
+            <a href="index.html" class="menu-link">
+              <svg class="menu-icon tf-icons mdi mdi-email-outline" width="24" height="24" viewBox="0 0 24 24"
+                fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 13H11V3H3V13ZM3 21H11V15H3V21ZM13 21H21V11H13V21ZM13 3V9H21V3H13Z" fill="#4C4E64"
+                  fill-opacity="0.54" />
+              </svg>
+
+              <div data-i18n="Dashboards">Dashboards</div>
+            </a>
+          </li>
+
+          <!-- Apps & Pages -->
+          <li class="menu-header fw-light mt-4">
+            <span class="menu-header-text">Activity Hub</span>
+          </li>
+          <li class="menu-item">
+            <a href="tasks.html" class="menu-link">
+
+              <svg class="menu-icon tf-icons mdi mdi-email-outline" width="24" height="24" viewBox="0 0 24 24"
+                fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M14 2H6C4.9 2 4.01 2.9 4.01 4L4 20C4 21.1 4.89 22 5.99 22H18C19.1 22 20 21.1 20 20V8L14 2ZM10.94 18L7.4 14.46L8.81 13.05L10.93 15.17L15.17 10.93L16.58 12.34L10.94 18ZM13 9V3.5L18.5 9H13Z"
+                  fill="#4C4E64" fill-opacity="0.54" />
+              </svg>
+
+              <div data-i18n="Tasks">Tasks</div>
+            </a>
+          </li>
+          <li class="menu-item">
+            <a href="deposits.html" class="menu-link">
+
+              <svg class="menu-icon tf-icons mdi mdi-message-outline" width="24" height="24" viewBox="0 0 24 24"
+                fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M11.8 10.9C9.53001 10.31 8.80001 9.7 8.80001 8.75C8.80001 7.66 9.81001 6.9 11.5 6.9C13.28 6.9 13.94 7.75 14 9H16.21C16.14 7.28 15.09 5.7 13 5.19V3H10V5.16C8.06001 5.58 6.50001 6.84 6.50001 8.77C6.50001 11.08 8.41001 12.23 11.2 12.9C13.7 13.5 14.2 14.38 14.2 15.31C14.2 16 13.71 17.1 11.5 17.1C9.44001 17.1 8.63001 16.18 8.52001 15H6.32001C6.44001 17.19 8.08001 18.42 10 18.83V21H13V18.85C14.95 18.48 16.5 17.35 16.5 15.3C16.5 12.46 14.07 11.49 11.8 10.9Z"
+                  fill="#4C4E64" fill-opacity="0.54" />
+              </svg>
+
+              <div data-i18n="Deposits">Deposits</div>
+            </a>
+          </li>
+          <li class="menu-item">
+            <a href="withdrawals.html" class="menu-link">
+
+              <svg class="menu-icon tf-icons mdi mdi-calendar-blank-outline" width="24" height="24" viewBox="0 0 24 24"
+                fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM13.41 18.09V20H10.74V18.07C9.03 17.71 7.58 16.61 7.47 14.67H9.43C9.53 15.72 10.25 16.54 12.08 16.54C14.04 16.54 14.48 15.56 14.48 14.95C14.48 14.12 14.04 13.34 11.81 12.81C9.33 12.21 7.63 11.19 7.63 9.14C7.63 7.42 9.02 6.3 10.74 5.93V4H13.41V5.95C15.27 6.4 16.2 7.81 16.26 9.34H14.3C14.25 8.23 13.66 7.47 12.08 7.47C10.58 7.47 9.68 8.15 9.68 9.11C9.68 9.95 10.33 10.5 12.35 11.02C14.37 11.54 16.53 12.41 16.53 14.93C16.52 16.76 15.15 17.76 13.41 18.09Z"
+                  fill="#4C4E64" fill-opacity="0.54" />
+              </svg>
+
+              <div data-i18n="Withdrawals">Withdrawals</div>
+            </a>
+          </li>
+          <li class="menu-item active">
+            <a href="referrals.html" class="menu-link">
+
+              <svg class="menu-icon tf-icons mdi mdi-view-grid-outline" width="24" height="24" viewBox="0 0 24 24"
+                fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M12 12.75C13.63 12.75 15.07 13.14 16.24 13.65C17.32 14.13 18 15.21 18 16.38V18H6V16.39C6 15.21 6.68 14.13 7.76 13.66C8.93 13.14 10.37 12.75 12 12.75ZM4 13C5.1 13 6 12.1 6 11C6 9.9 5.1 9 4 9C2.9 9 2 9.9 2 11C2 12.1 2.9 13 4 13ZM5.13 14.1C4.76 14.04 4.39 14 4 14C3.01 14 2.07 14.21 1.22 14.58C0.48 14.9 0 15.62 0 16.43V18H4.5V16.39C4.5 15.56 4.73 14.78 5.13 14.1ZM20 13C21.1 13 22 12.1 22 11C22 9.9 21.1 9 20 9C18.9 9 18 9.9 18 11C18 12.1 18.9 13 20 13ZM24 16.43C24 15.62 23.52 14.9 22.78 14.58C21.93 14.21 20.99 14 20 14C19.61 14 19.24 14.04 18.87 14.1C19.27 14.78 19.5 15.56 19.5 16.39V18H24V16.43ZM12 6C13.66 6 15 7.34 15 9C15 10.66 13.66 12 12 12C10.34 12 9 10.66 9 9C9 7.34 10.34 6 12 6Z"
+                  fill="#4C4E64" fill-opacity="0.54" />
+              </svg>
+
+              <div data-i18n="Referrals">Referrals</div>
+            </a>
+          </li>
+
+          <li class="menu-header fw-light mt-4">
+            <span class="menu-header-text">System</span>
+          </li>
+
+          <li class="menu-item">
+            <a href="notifications.html" class="menu-link">
+
+              <svg class="menu-icon tf-icons mdi mdi-view-grid-outline" width="24" height="24" viewBox="0 0 24 24"
+                fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M12 22C13.1 22 14 21.1 14 20H10C10 21.1 10.89 22 12 22ZM18 16V11C18 7.93 16.36 5.36 13.5 4.68V4C13.5 3.17 12.83 2.5 12 2.5C11.17 2.5 10.5 3.17 10.5 4V4.68C7.63 5.36 6 7.92 6 11V16L4 18V19H20V18L18 16Z"
+                  fill="#4C4E64" fill-opacity="0.54" />
+              </svg>
+
+
+              <div data-i18n="Notifications">Notifications</div>
+            </a>
+          </li>
+
+          <li class="menu-item">
+            <a href="profile.html" class="menu-link">
+
+              <svg class="menu-icon tf-icons mdi mdi-view-grid-outline" width="24" height="24" viewBox="0 0 24 24"
+                fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M12 12C14.21 12 16 10.21 16 8C16 5.79 14.21 4 12 4C9.79 4 8 5.79 8 8C8 10.21 9.79 12 12 12ZM12 14C9.33 14 4 15.34 4 18V20H20V18C20 15.34 14.67 14 12 14Z"
+                  fill="#4C4E64" fill-opacity="0.54" />
+              </svg>
+
+
+
+              <div data-i18n="Profile">Profile</div>
+            </a>
+          </li>
+
+          <li class="menu-item">
+            <a href="#" class="menu-link">
+
+              <svg class="menu-icon tf-icons mdi mdi-view-grid-outline" width="24" height="24" viewBox="0 0 24 24"
+                fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M19.43 12.98C19.47 12.66 19.5 12.34 19.5 12C19.5 11.66 19.47 11.34 19.43 11.02L21.54 9.37C21.73 9.22 21.78 8.95 21.66 8.73L19.66 5.27C19.57 5.11 19.4 5.02 19.22 5.02C19.16 5.02 19.1 5.03 19.05 5.05L16.56 6.05C16.04 5.65 15.48 5.32 14.87 5.07L14.49 2.42C14.46 2.18 14.25 2 14 2H10C9.75002 2 9.54002 2.18 9.51002 2.42L9.13002 5.07C8.52002 5.32 7.96002 5.66 7.44002 6.05L4.95002 5.05C4.89002 5.03 4.83002 5.02 4.77002 5.02C4.60002 5.02 4.43002 5.11 4.34002 5.27L2.34002 8.73C2.21002 8.95 2.27002 9.22 2.46002 9.37L4.57002 11.02C4.53002 11.34 4.50002 11.67 4.50002 12C4.50002 12.33 4.53002 12.66 4.57002 12.98L2.46002 14.63C2.27002 14.78 2.22002 15.05 2.34002 15.27L4.34002 18.73C4.43002 18.89 4.60002 18.98 4.78002 18.98C4.84002 18.98 4.90002 18.97 4.95002 18.95L7.44002 17.95C7.96002 18.35 8.52002 18.68 9.13002 18.93L9.51002 21.58C9.54002 21.82 9.75002 22 10 22H14C14.25 22 14.46 21.82 14.49 21.58L14.87 18.93C15.48 18.68 16.04 18.34 16.56 17.95L19.05 18.95C19.11 18.97 19.17 18.98 19.23 18.98C19.4 18.98 19.57 18.89 19.66 18.73L21.66 15.27C21.78 15.05 21.73 14.78 21.54 14.63L19.43 12.98ZM17.45 11.27C17.49 11.58 17.5 11.79 17.5 12C17.5 12.21 17.48 12.43 17.45 12.73L17.31 13.86L18.2 14.56L19.28 15.4L18.58 16.61L17.31 16.1L16.27 15.68L15.37 16.36C14.94 16.68 14.53 16.92 14.12 17.09L13.06 17.52L12.9 18.65L12.7 20H11.3L11.11 18.65L10.95 17.52L9.89002 17.09C9.46002 16.91 9.06002 16.68 8.66002 16.38L7.75002 15.68L6.69002 16.11L5.42002 16.62L4.72002 15.41L5.80002 14.57L6.69002 13.87L6.55002 12.74C6.52002 12.43 6.50002 12.2 6.50002 12C6.50002 11.8 6.52002 11.57 6.55002 11.27L6.69002 10.14L5.80002 9.44L4.72002 8.6L5.42002 7.39L6.69002 7.9L7.73002 8.32L8.63002 7.64C9.06002 7.32 9.47002 7.08 9.88002 6.91L10.94 6.48L11.1 5.35L11.3 4H12.69L12.88 5.35L13.04 6.48L14.1 6.91C14.53 7.09 14.93 7.32 15.33 7.62L16.24 8.32L17.3 7.89L18.57 7.38L19.27 8.59L18.2 9.44L17.31 10.14L17.45 11.27ZM12 8C9.79002 8 8.00002 9.79 8.00002 12C8.00002 14.21 9.79002 16 12 16C14.21 16 16 14.21 16 12C16 9.79 14.21 8 12 8ZM12 14C10.9 14 10 13.1 10 12C10 10.9 10.9 10 12 10C13.1 10 14 10.9 14 12C14 13.1 13.1 14 12 14Z"
+                  fill="#4C4E64" fill-opacity="0.54" />
+              </svg>
+
+
+
+              <div data-i18n="Settings">Settings</div>
+            </a>
+          </li>
+
+          <li class="menu-header fw-light mt-4">
+            <span class="menu-header-text">Information Center</span>
+          </li>
+
+          <li class="menu-item">
+            <a href="faq's.html" class="menu-link">
+
+              <svg class="menu-icon tf-icons mdi mdi-view-grid-outline" width="24" height="24" viewBox="0 0 24 24"
+                fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M21 6H19V15H6V17C6 17.55 6.45 18 7 18H18L22 22V7C22 6.45 21.55 6 21 6ZM17 12V3C17 2.45 16.55 2 16 2H3C2.45 2 2 2.45 2 3V17L6 13H16C16.55 13 17 12.55 17 12Z"
+                  fill="#4C4E64" fill-opacity="0.54" />
+              </svg>
+
+              <div data-i18n="FAQ's">FAQ's</div>
+            </a>
+          </li>
+
+          <li class="menu-item">
+            <a href="#" class="menu-link">
+
+              <svg class="menu-icon tf-icons mdi mdi-view-grid-outline" width="24" height="24" viewBox="0 0 24 24"
+                fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7 10H4V17H7V10Z" fill="#4C4E64" fill-opacity="0.54" />
+                <path d="M13.5 10H10.5V17H13.5V10Z" fill="#4C4E64" fill-opacity="0.54" />
+                <path d="M22 19H2V22H22V19Z" fill="#4C4E64" fill-opacity="0.54" />
+                <path d="M20 10H17V17H20V10Z" fill="#4C4E64" fill-opacity="0.54" />
+                <path d="M12 1L2 6V8H22V6L12 1Z" fill="#4C4E64" fill-opacity="0.54" />
+              </svg>
+
+
+              <div data-i18n="Legal">Legal</div>
+            </a>
+          </li>
+
+          <!-- Components -->
+
+        </ul>
+      </aside>
+      <!-- / Menu -->
+
+      <!-- Layout container -->
+      <div class="layout-page">
+        <!-- Navbar -->
+
+        <nav
+          class="layout-navbar container-xxl navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme"
+          id="layout-navbar">
+          <div class="layout-menu-toggle navbar-nav align-items-xl-center me-3 me-xl-0 d-xl-none">
+            <a class="nav-item nav-link px-0 me-xl-4" href="javascript:void(0)">
+              <i class="mdi mdi-menu mdi-24px"></i>
+            </a>
+          </div>
+
+          <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
+            <!-- Search -->
+            <div class="navbar-nav align-items-center">
+              <div class="nav-item navbar-search-wrapper mb-0">
+                <a class="nav-item nav-link search-toggler fw-normal px-0" href="javascript:void(0);">
+                  <i class="mdi mdi-magnify mdi-24px scaleX-n1-rtl"></i>
+                  <span class="d-none d-md-inline-block text-muted">Search (Ctrl+/)</span>
+                </a>
+              </div>
+            </div>
+            <!-- /Search -->
+
+            <ul class="navbar-nav flex-row align-items-center ms-auto">
+              <!-- Language -->
+              <li class="nav-item dropdown-language dropdown me-1 me-xl-0">
+                <a class="nav-link btn btn-text-secondary rounded-pill btn-icon dropdown-toggle hide-arrow"
+                  href="javascript:void(0);" data-bs-toggle="dropdown">
+                  <i class="mdi mdi-translate mdi-24px"></i>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li>
+                    <a class="dropdown-item" href="javascript:void(0);" data-language="en">
+                      <span class="align-middle">English</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="javascript:void(0);" data-language="fr">
+                      <span class="align-middle">French</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="javascript:void(0);" data-language="de">
+                      <span class="align-middle">German</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="javascript:void(0);" data-language="pt">
+                      <span class="align-middle">Portuguese</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <!--/ Language -->
+
+              <!-- Style Switcher -->
+              <li class="nav-item me-1 me-xl-0">
+                <a class="nav-link btn btn-text-secondary rounded-pill btn-icon style-switcher-toggle hide-arrow"
+                  href="javascript:void(0);">
+                  <i class="mdi mdi-24px"></i>
+                </a>
+              </li>
+              <!--/ Style Switcher -->
+
+
+
+              <!-- Notification -->
+              <li class="nav-item dropdown-notifications navbar-dropdown dropdown me-2 me-xl-1">
+                <a class="nav-link btn btn-text-secondary rounded-pill btn-icon dropdown-toggle hide-arrow"
+                  href="javascript:void(0);" data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                  aria-expanded="false">
+                  <i class="mdi mdi-bell-outline mdi-24px"></i>
+                  <span
+                    class="position-absolute top-0 start-50 translate-middle-y badge badge-dot bg-danger mt-2 border"></span>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end py-0">
+                  <li class="dropdown-menu-header border-bottom">
+                    <div class="dropdown-header d-flex align-items-center py-3">
+                      <h6 class="mb-0 me-auto">Notification</h6>
+                      <span class="badge rounded-pill bg-label-primary">8 New</span>
+                    </div>
+                  </li>
+                  <li class="dropdown-notifications-list scrollable-container">
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item list-group-item-action dropdown-notifications-item">
+                        <div class="d-flex gap-2">
+                          <div class="flex-shrink-0">
+                            <div class="avatar me-1">
+                              <img src="../../assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle" />
+                            </div>
+                          </div>
+                          <div class="d-flex flex-column flex-grow-1 overflow-hidden w-px-200">
+                            <h6 class="mb-1 text-truncate">Congratulation Lettie 🎉</h6>
+                            <small class="text-truncate text-body">Won the monthly best seller gold badge</small>
+                          </div>
+                          <div class="flex-shrink-0 dropdown-notifications-actions">
+                            <small class="text-muted">1h ago</small>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="list-group-item list-group-item-action dropdown-notifications-item">
+                        <div class="d-flex gap-2">
+                          <div class="flex-shrink-0">
+                            <div class="avatar me-1">
+                              <span class="avatar-initial rounded-circle bg-label-danger">CF</span>
+                            </div>
+                          </div>
+                          <div class="d-flex flex-column flex-grow-1 overflow-hidden w-px-200">
+                            <h6 class="mb-1 text-truncate">Charles Franklin</h6>
+                            <small class="text-truncate text-body">Accepted your connection</small>
+                          </div>
+                          <div class="flex-shrink-0 dropdown-notifications-actions">
+                            <small class="text-muted">12hr ago</small>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="list-group-item list-group-item-action dropdown-notifications-item marked-as-read">
+                        <div class="d-flex gap-2">
+                          <div class="flex-shrink-0">
+                            <div class="avatar me-1">
+                              <img src="../../assets/img/avatars/2.png" alt class="w-px-40 h-auto rounded-circle" />
+                            </div>
+                          </div>
+                          <div class="d-flex flex-column flex-grow-1 overflow-hidden w-px-200">
+                            <h6 class="mb-1 text-truncate">New Message ✉️</h6>
+                            <small class="text-truncate text-body">You have new message from Natalie</small>
+                          </div>
+                          <div class="flex-shrink-0 dropdown-notifications-actions">
+                            <small class="text-muted">1h ago</small>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="list-group-item list-group-item-action dropdown-notifications-item">
+                        <div class="d-flex gap-2">
+                          <div class="flex-shrink-0">
+                            <div class="avatar me-1">
+                              <span class="avatar-initial rounded-circle bg-label-success"><i
+                                  class="mdi mdi-cart-outline"></i></span>
+                            </div>
+                          </div>
+                          <div class="d-flex flex-column flex-grow-1 overflow-hidden w-px-200">
+                            <h6 class="mb-1 text-truncate">Whoo! You have new order 🛒</h6>
+                            <small class="text-truncate text-body">ACME Inc. made new order $1,154</small>
+                          </div>
+                          <div class="flex-shrink-0 dropdown-notifications-actions">
+                            <small class="text-muted">1 day ago</small>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="list-group-item list-group-item-action dropdown-notifications-item marked-as-read">
+                        <div class="d-flex gap-2">
+                          <div class="flex-shrink-0">
+                            <div class="avatar me-1">
+                              <img src="../../assets/img/avatars/9.png" alt class="w-px-40 h-auto rounded-circle" />
+                            </div>
+                          </div>
+                          <div class="d-flex flex-column flex-grow-1 overflow-hidden w-px-200">
+                            <h6 class="mb-1 text-truncate">Application has been approved 🚀</h6>
+                            <small class="text-truncate text-body">Your ABC project application has been
+                              approved.</small>
+                          </div>
+                          <div class="flex-shrink-0 dropdown-notifications-actions">
+                            <small class="text-muted">2 days ago</small>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="list-group-item list-group-item-action dropdown-notifications-item marked-as-read">
+                        <div class="d-flex gap-2">
+                          <div class="flex-shrink-0">
+                            <div class="avatar me-1">
+                              <span class="avatar-initial rounded-circle bg-label-success"><i
+                                  class="mdi mdi-chart-pie-outline"></i></span>
+                            </div>
+                          </div>
+                          <div class="d-flex flex-column flex-grow-1 overflow-hidden w-px-200">
+                            <h6 class="mb-1 text-truncate">Monthly report is generated</h6>
+                            <small class="text-truncate text-body">July monthly financial report is generated </small>
+                          </div>
+                          <div class="flex-shrink-0 dropdown-notifications-actions">
+                            <small class="text-muted">3 days ago</small>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="list-group-item list-group-item-action dropdown-notifications-item marked-as-read">
+                        <div class="d-flex gap-2">
+                          <div class="flex-shrink-0">
+                            <div class="avatar me-1">
+                              <img src="../../assets/img/avatars/5.png" alt class="w-px-40 h-auto rounded-circle" />
+                            </div>
+                          </div>
+                          <div class="d-flex flex-column flex-grow-1 overflow-hidden w-px-200">
+                            <h6 class="mb-1 text-truncate">Send connection request</h6>
+                            <small class="text-truncate text-body">Peter sent you connection request</small>
+                          </div>
+                          <div class="flex-shrink-0 dropdown-notifications-actions">
+                            <small class="text-muted">4 days ago</small>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="list-group-item list-group-item-action dropdown-notifications-item">
+                        <div class="d-flex gap-2">
+                          <div class="flex-shrink-0">
+                            <div class="avatar me-1">
+                              <img src="../../assets/img/avatars/6.png" alt class="w-px-40 h-auto rounded-circle" />
+                            </div>
+                          </div>
+                          <div class="d-flex flex-column flex-grow-1 overflow-hidden w-px-200">
+                            <h6 class="mb-1 text-truncate">New message from Jane</h6>
+                            <small class="text-truncate text-body">Your have new message from Jane</small>
+                          </div>
+                          <div class="flex-shrink-0 dropdown-notifications-actions">
+                            <small class="text-muted">5 days ago</small>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="list-group-item list-group-item-action dropdown-notifications-item marked-as-read">
+                        <div class="d-flex gap-2">
+                          <div class="flex-shrink-0">
+                            <div class="avatar me-1">
+                              <span class="avatar-initial rounded-circle bg-label-warning"><i
+                                  class="mdi mdi-alert-circle-outline"></i></span>
+                            </div>
+                          </div>
+                          <div class="d-flex flex-column flex-grow-1 overflow-hidden w-px-200">
+                            <h6 class="mb-1">CPU is running high</h6>
+                            <small class="text-truncate text-body">CPU Utilization Percent is currently at
+                              88.63%,</small>
+                          </div>
+                          <div class="flex-shrink-0 dropdown-notifications-actions">
+                            <small class="text-muted">5 days ago</small>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="dropdown-menu-footer border-top p-2">
+                    <a href="javascript:void(0);" class="btn btn-primary d-flex justify-content-center">
+                      View all notifications
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <!--/ Notification -->
+
+              <!-- User -->
+              <li class="nav-item navbar-dropdown dropdown-user dropdown">
+                <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
+                  <div class="avatar avatar-online">
+                    <img src="../../assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle" />
+                  </div>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li>
+                    <a class="dropdown-item" href="pages-account-settings-account.html">
+                      <div class="d-flex">
+                        <div class="flex-shrink-0 me-3">
+                          <div class="avatar avatar-online">
+                            <img src="../../assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle" />
+                          </div>
+                        </div>
+                        <div class="flex-grow-1">
+                          <span class="fw-semibold d-block">John Doe</span>
+                          <small class="text-muted">Admin</small>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <div class="dropdown-divider"></div>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="pages-profile-user.html">
+                      <i class="mdi mdi-account-outline me-2"></i>
+                      <span class="align-middle">My Profile</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="pages-account-settings-account.html">
+                      <i class="mdi mdi-cog-outline me-2"></i>
+                      <span class="align-middle">Settings</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="pages-account-settings-billing.html">
+                      <span class="d-flex align-items-center align-middle">
+                        <i class="flex-shrink-0 mdi mdi-credit-card-outline me-2"></i>
+                        <span class="flex-grow-1 align-middle">Billing</span>
+                        <span class="flex-shrink-0 badge badge-center rounded-pill bg-danger w-px-20 h-px-20">4</span>
+                      </span>
+                    </a>
+                  </li>
+                  <li>
+                    <div class="dropdown-divider"></div>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="pages-help-center-landing.html">
+                      <i class="mdi mdi-lifebuoy me-2"></i>
+                      <span class="align-middle">Help</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="pages-faq.html">
+                      <i class="mdi mdi-help-circle-outline me-2"></i>
+                      <span class="align-middle">FAQ</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="pages-pricing.html">
+                      <i class="mdi mdi-currency-usd me-2"></i>
+                      <span class="align-middle">Pricing</span>
+                    </a>
+                  </li>
+                  <li>
+                    <div class="dropdown-divider"></div>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="auth-login-cover.html" target="_blank">
+                      <i class="mdi mdi-logout me-2"></i>
+                      <span class="align-middle">Log Out</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <!--/ User -->
+            </ul>
+          </div>
+
+          <!-- Search Small Screens -->
+          <div class="navbar-search-wrapper search-input-wrapper d-none">
+            <input type="text" class="form-control search-input container-xxl border-0" placeholder="Search..."
+              aria-label="Search..." />
+            <i class="mdi mdi-close search-toggler cursor-pointer"></i>
+          </div>
+        </nav>
+
+        <!-- / Navbar -->
+
+        <!-- Content wrapper -->
+        <div class="content-wrapper">
+          <!-- Content -->
+
+          <div class="container-xxl flex-grow-1 container-p-y">
+            <div class="row gy-4">
+              <!-- Gamification Card -->
+              <div class="col-lg-12">
+                <div class="card h-100">
+                  <div class="card-header">
+                    <div class="d-flex justify-content-between">
+                      <h4 class="mb-2">Referrals Overview</h4>
+
+                    </div>
+
+                  </div>
+                  <div class="card-body d-flex justify-content-between flex-wrap gap-3">
+                    <div class="d-flex align-items-center flex-wrap gap-2">
+                      <div class="avatar me-3">
+                        <div class="avatar-initial bg-label-warning rounded">
+
+                          <span class="mdi mdi-account-group"></span>
+
+                        </div>
+                      </div>
+                      <div class="card-info">
+                        <div class="d-flex align-items-center">
+                          <h4 class="mb-0">28</h4>
+                          <i class="mdi mdi-chevron-up text-success"></i>
+                          <small class="text-success">18.2%</small>
+                        </div>
+                        <small class="text-muted">Indirect Referrals</small>
+                      </div>
+                    </div>
+                    <div class="d-flex align-items-center flex-wrap gap-2">
+                      <div class="avatar me-3">
+                        <div class="avatar-initial bg-label-primary rounded">
+
+                          <span class="mdi mdi-account-group"></span>
+
+                        </div>
+                      </div>
+                      <div class="card-info">
+                        <div class="d-flex align-items-center">
+                          <h4 class="mb-0">36</h4>
+                          <i class="mdi mdi-chevron-up text-success"></i>
+                          <small class="text-success">24.6%</small>
+                        </div>
+                        <small class="text-muted">Direct Referrals</small>
+                      </div>
+                    </div>
+                    <div class="d-flex align-items-center flex-wrap gap-2">
+                      <div class="avatar me-3">
+                        <div class="avatar-initial bg-label-success rounded">
+                          <span class="mdi mdi-account-group"></span>
+
+                        </div>
+                      </div>
+                      <div class="card-info">
+                        <div class="d-flex align-items-center">
+                          <h4 class="mb-0">760</h4>
+                          <i class="mdi mdi-chevron-up text-success"></i>
+                          <small class="text-success">24.6%</small>
+                        </div>
+                        <small class="text-muted">Total Referrals</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!--/ Gamification Card -->
+
+
+
+              <!-- Total Transactions & Report Chart -->
+              <div class="col-md-12 col-xl-12">
+                <div class="card">
+                  <div class="card-header">
+                    <div class="row">
+                      <div class="col-sm-12 col-md-6">
+                        <div class="dataTables_length" id="DataTables_Table_1_length"><label><select
+                              name="DataTables_Table_1_length" aria-controls="DataTables_Table_1"
+                              class="form-select form-select-sm">
+                              <option value="10">10</option>
+                              <option value="25">25</option>
+                              <option value="50">50</option>
+                              <option value="100">100</option>
+                            </select> entries</label></div>
+                      </div>
+                      <div class="col-sm-12 col-md-6 d-flex justify-content-center justify-content-md-end">
+                        <div id="DataTables_Table_1_filter" class="dataTables_filter"><label>Search:<input type="search"
+                              class="form-control form-control-sm" placeholder=""
+                              aria-controls="DataTables_Table_1"></label></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="table-responsive text-nowrap">
+                    <table class="table">
+                      <thead class="table-light">
+                        <tr>
+                          <th>USER</th>
+                          <th>EMAIL</th>
+                          <th>COMPLETED TASKS</th>
+                          <th>EARNINGS</th>
+                          <th>LEVEL</th>
+                          <th>Status</th>
+
+                        </tr>
+                      </thead>
+                      <tbody class="table-border-bottom-0">
+                        <tr>
+                          <td>
+                            <div class="d-flex flex-wrap">
+                              <div class="avatar me-3">
+                                <img src="../../assets/img/avatars/3.png" alt="Avatar" class="rounded-circle">
+                              </div>
+                              <div>
+                                <h6 class="mb-0">Lester McCarthy</h6>
+                                <span class="text-muted">@amiccoo</span>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <p class="text-primary mb-1">susanna.Lind57@gmail.com</p>
+                          </td>
+                          <td><span class="badge badge-center rounded-pill bg-label-warning">10</span>
+                          </td>
+                          <td>
+                            <p class="text-primary mb-1">$100</p>
+                          </td>
+                          <td>Gold</td>
+
+                          <td><span class="badge  rounded-pill bg-label-success">Completed</span>
+                          </td>
+
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="d-flex flex-wrap">
+                              <div class="avatar me-3">
+                                <img src="../../assets/img/avatars/3.png" alt="Avatar" class="rounded-circle">
+                              </div>
+                              <div>
+                                <h6 class="mb-0">Lester McCarthy</h6>
+                                <span class="text-muted">@amiccoo</span>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <p class="text-primary mb-1">susanna.Lind57@gmail.com</p>
+                          </td>
+                          <td><span class="badge badge-center rounded-pill bg-label-warning">10</span>
+                          </td>
+                          <td>
+                            <p class="text-primary mb-1">$100</p>
+                          </td>
+                          <td>Gold</td>
+
+                          <td><span class="badge  rounded-pill bg-label-success">Completed</span>
+                          </td>
+
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="d-flex flex-wrap">
+                              <div class="avatar me-3">
+                                <img src="../../assets/img/avatars/3.png" alt="Avatar" class="rounded-circle">
+                              </div>
+                              <div>
+                                <h6 class="mb-0">Lester McCarthy</h6>
+                                <span class="text-muted">@amiccoo</span>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <p class="text-primary mb-1">susanna.Lind57@gmail.com</p>
+                          </td>
+                          <td><span class="badge badge-center rounded-pill bg-label-warning">10</span>
+                          </td>
+                          <td>
+                            <p class="text-primary mb-1">$100</p>
+                          </td>
+                          <td>Gold</td>
+
+                          <td><span class="badge  rounded-pill bg-label-success">Completed</span>
+                          </td>
+
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="d-flex flex-wrap">
+                              <div class="avatar me-3">
+                                <img src="../../assets/img/avatars/3.png" alt="Avatar" class="rounded-circle">
+                              </div>
+                              <div>
+                                <h6 class="mb-0">Lester McCarthy</h6>
+                                <span class="text-muted">@amiccoo</span>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <p class="text-primary mb-1">susanna.Lind57@gmail.com</p>
+                          </td>
+                          <td><span class="badge badge-center rounded-pill bg-label-warning">10</span>
+                          </td>
+                          <td>
+                            <p class="text-primary mb-1">$100</p>
+                          </td>
+                          <td>Gold</td>
+
+                          <td><span class="badge  rounded-pill bg-label-success">Completed</span>
+                          </td>
+
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="d-flex flex-wrap">
+                              <div class="avatar me-3">
+                                <img src="../../assets/img/avatars/3.png" alt="Avatar" class="rounded-circle">
+                              </div>
+                              <div>
+                                <h6 class="mb-0">Lester McCarthy</h6>
+                                <span class="text-muted">@amiccoo</span>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <p class="text-primary mb-1">susanna.Lind57@gmail.com</p>
+                          </td>
+                          <td><span class="badge badge-center rounded-pill bg-label-warning">10</span>
+                          </td>
+                          <td>
+                            <p class="text-primary mb-1">$100</p>
+                          </td>
+                          <td>Gold</td>
+
+                          <td><span class="badge  rounded-pill bg-label-success">Completed</span>
+                          </td>
+
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="d-flex flex-wrap">
+                              <div class="avatar me-3">
+                                <img src="../../assets/img/avatars/3.png" alt="Avatar" class="rounded-circle">
+                              </div>
+                              <div>
+                                <h6 class="mb-0">Lester McCarthy</h6>
+                                <span class="text-muted">@amiccoo</span>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <p class="text-primary mb-1">susanna.Lind57@gmail.com</p>
+                          </td>
+                          <td><span class="badge badge-center rounded-pill bg-label-warning">10</span>
+                          </td>
+                          <td>
+                            <p class="text-primary mb-1">$100</p>
+                          </td>
+                          <td>Gold</td>
+
+                          <td><span class="badge  rounded-pill bg-label-success">Completed</span>
+                          </td>
+
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="d-flex flex-wrap">
+                              <div class="avatar me-3">
+                                <img src="../../assets/img/avatars/3.png" alt="Avatar" class="rounded-circle">
+                              </div>
+                              <div>
+                                <h6 class="mb-0">Lester McCarthy</h6>
+                                <span class="text-muted">@amiccoo</span>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <p class="text-primary mb-1">susanna.Lind57@gmail.com</p>
+                          </td>
+                          <td><span class="badge badge-center rounded-pill bg-label-warning">10</span>
+                          </td>
+                          <td>
+                            <p class="text-primary mb-1">$100</p>
+                          </td>
+                          <td>Gold</td>
+
+                          <td><span class="badge  rounded-pill bg-label-success">Completed</span>
+                          </td>
+
+                        </tr>
+
+                      </tbody>
+                    </table>
+                    <nav aria-label="Page navigation">
+                      <ul class="pagination justify-content-end">
+                          <label>Rows per page<select name="DataTables_Table_0_length" aria-controls="DataTables_Table_0" class="form-select form-select-sm">
+                                  <option value="10">5</option>
+                                  <option value="25">6</option>
+                                  <option value="50">7</option>
+                                  <option value="100">10</option>
+                              </select> </label>
+                          <li class="page-item prev">
+                              <a class="page-link waves-effect" href="javascript:void(0);"><i class="tf-icon mdi mdi-chevron-double-left"></i></a>
+                          </li>
+                          <li class="page-item active">
+                              <a class="page-link waves-effect" href="javascript:void(0);">1</a>
+                          </li>
+                          <li class="page-item">
+                              <a class="page-link waves-effect" href="javascript:void(0);">2</a>
+                          </li>
+                          <li class="page-item">
+                              <a class="page-link waves-effect" href="javascript:void(0);">3</a>
+                          </li>
+                          <li class="page-item">
+                              <a class="page-link waves-effect" href="javascript:void(0);">4</a>
+                          </li>
+                          <li class="page-item">
+                              <a class="page-link waves-effect" href="javascript:void(0);">5</a>
+                          </li>
+                          <li class="page-item next">
+                              <a class="page-link waves-effect" href="javascript:void(0);"><i class="tf-icon mdi mdi-chevron-double-right"></i></a>
+                          </li>
+                      </ul>
+                  </nav>
+                  </div>
+                </div>
+              </div>
+              <!--/ Total Transactions & Report Chart -->
+
+
+              <!--/ Weekly Sales Chart-->
+
+              <!-- visits By Day Chart-->
+
+            </div>
+          </div>
+          <!-- / Content -->
+
+          <!-- Footer -->
+            
+          <!-- / Footer -->
+
+          <div class="content-backdrop fade"></div>
+        </div>
+        <!-- Content wrapper -->
+      </div>
+      <!-- / Layout page -->
+    </div>
+
+    <!-- Overlay -->
+    <div class="layout-overlay layout-menu-toggle"></div>
+
+    <!-- Drag Target Area To SlideIn Menu On Small Screens -->
+    <div class="drag-target"></div>
+  </div>
+  <!-- / Layout wrapper -->
+
+  <!-- Core JS -->
+  <!-- build:js assets/vendor/js/core.js -->
+  <script src="../../assets/vendor/libs/jquery/jquery.js"></script>
+  <script src="../../assets/vendor/libs/popper/popper.js"></script>
+  <script src="../../assets/vendor/js/bootstrap.js"></script>
+  <script src="../../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+  <script src="../../assets/vendor/libs/node-waves/node-waves.js"></script>
+
+  <script src="../../assets/vendor/libs/hammer/hammer.js"></script>
+  <script src="../../assets/vendor/libs/i18n/i18n.js"></script>
+  <script src="../../assets/vendor/libs/typeahead-js/typeahead.js"></script>
+
+  <script src="../../assets/vendor/js/menu.js"></script>
+  <!-- endbuild -->
+
+  <!-- Vendors JS -->
+  <script src="../../assets/vendor/libs/apex-charts/apexcharts.js"></script>
+  <script src="../../assets/vendor/libs/swiper/swiper.js"></script>
+
+  <!-- Main JS -->
+  <script src="../../assets/js/main.js"></script>
+
+  <!-- Page JS -->
+  <script src="../../assets/js/dashboards-analytics.js"></script>
+</body>
+
+</html>
